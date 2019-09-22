@@ -16,8 +16,32 @@ public class GameItem : UIDragDropItem
         base.OnDragDropRelease(surface);
         if (surface != null)
         {
-            print(surface.gameObject.tag);
+            if (surface.gameObject.tag == Tags.itemGrid)
+            {
+                if (surface != transform.parent.gameObject)
+                {
+                    BagGrid oldbagGrid = transform.parent.GetComponent<BagGrid>();
+                    transform.parent = surface.transform;
+                    BagGrid newbagGrid = surface.GetComponent<BagGrid>();
+                    newbagGrid.SetId(oldbagGrid.id, oldbagGrid.num);
+                    oldbagGrid.ClearItem();
+                }
+            }
+            else if (surface.gameObject.tag == Tags.item)
+            {
+                BagGrid grid1 = transform.parent.GetComponent<BagGrid>();
+                BagGrid grid2 = surface.transform.parent.GetComponent<BagGrid>();
+                int id = grid1.id;
+                int num = grid1.num;
+                grid1.SetId(grid2.id, grid2.num);
+                grid2.SetId(id, num);
+            }
         }
+        ResetPos();
+    }
+    private void ResetPos()
+    {
+        transform.localPosition = Vector3.zero;
     }
     public void SetId(int _id)
     {

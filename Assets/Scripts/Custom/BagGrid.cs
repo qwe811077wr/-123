@@ -6,7 +6,7 @@ public class BagGrid : MonoBehaviour
 {
     public int id = 0;
     private ObjectItem item = null;
-    private int num = 0;
+    public int num = 0;
     private UILabel numLabel;
     // Use this for initialization
     void Start()
