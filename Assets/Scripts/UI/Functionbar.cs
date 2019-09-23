@@ -10,7 +10,7 @@ public class Functionbar : MonoBehaviour
     }
     public void OnBagBtnClick()
     {
-
+        BagMgr._instance.TransformState();
     }
     public void OnEquipBtnClick()
     {

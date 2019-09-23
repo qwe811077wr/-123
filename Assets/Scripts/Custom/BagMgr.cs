@@ -17,11 +17,13 @@ public class BagMgr : MonoBehaviour
     private int spacePosY = 100;
     public int oneLineCount = 5;
     public int totalGridNum = 16;
+    private bool isShow = false;
     void Awake()
     {
         _instance = this;
         tween = GetComponent<TweenPosition>();
         InitGrids();
+        Hide();
     }
     void InitGrids()
     {
@@ -77,18 +79,27 @@ public class BagMgr : MonoBehaviour
         }
         return null;
     }
-    public void Show()
+    void Show()
     {
+        isShow = true;
         tween.PlayForward();
     }
-    public void Hide()
+    void Hide()
     {
+        isShow = false;
         tween.PlayReverse();
     }
-    // Use this for initialization
-    void Start()
-    {
 
+    public void TransformState()
+    {
+        if (isShow == false)
+        {
+            Show();
+        }
+        else
+        {
+            Hide();
+        }
     }
 
     // Update is called once per frame
