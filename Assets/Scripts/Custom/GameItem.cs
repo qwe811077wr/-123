@@ -49,4 +49,14 @@ public class GameItem : UIDragDropItem
         ObjectItem item = GameItems._instance.GetItemById(id);
         icon.spriteName = item.icon_name;
     }
+
+    public void OnHoverOut()
+    {
+        ItemInfo._instance.Hide();
+    }
+
+    public void OnHoverOver()
+    {
+        ItemInfo._instance.Show(id);
+    }
 }
