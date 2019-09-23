@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114533165598659072}
   - component: {fileID: 61023694798260326}
   - component: {fileID: 114622669912877730}
+  - component: {fileID: 114783741942267686}
+  - component: {fileID: 114757310733489600}
   m_Layer: 5
   m_Name: Item
   m_TagString: Item
@@ -136,3 +138,46 @@ MonoBehaviour:
   cloneOnDrag: 0
   pressAndHoldDelay: 1
   interactable: 1
+--- !u!114 &114757310733489600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007876301548472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e862f287df53bb64db191162f851a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOver:
+  - mTarget: {fileID: 114622669912877730}
+    mMethodName: OnHoverOver
+    mParameters: []
+    oneShot: 0
+  onHoverOut:
+  - mTarget: {fileID: 114622669912877730}
+    mMethodName: OnHoverOut
+    mParameters: []
+    oneShot: 0
+  onPress: []
+  onRelease: []
+  onSelect: []
+  onDeselect: []
+  onClick: []
+  onDoubleClick: []
+  onDragStart: []
+  onDragEnd: []
+  onDragOver: []
+  onDragOut: []
+  onDrag: []
+--- !u!114 &114783741942267686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007876301548472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bd99dcf43f97d48bb6215c70f0cd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
