@@ -6,7 +6,7 @@ public class Functionbar : MonoBehaviour
 {
     public void OnStatusBtnClick()
     {
-
+        Status._instance.TransformState();
     }
     public void OnBagBtnClick()
     {

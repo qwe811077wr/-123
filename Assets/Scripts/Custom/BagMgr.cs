@@ -23,7 +23,6 @@ public class BagMgr : MonoBehaviour
         _instance = this;
         tween = GetComponent<TweenPosition>();
         InitGrids();
-        Hide();
     }
     void InitGrids()
     {
